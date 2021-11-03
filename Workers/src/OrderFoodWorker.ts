@@ -9,8 +9,9 @@ zbc.createWorker({
 	taskHandler: (job, _, worker) => {		
 	
 	const {  orderType  } = job.customHeaders;
+	const {  tablenumber  } = job.variables
 
-	const messageForKitchen = "This is a order for " + `${orderType}`
+	const messageForKitchen = "This is a order for " + `${orderType}` + tablenumber
 	console.log("Your food is ready for: "+ `${orderType}`)
 	return job.complete({  messageForKitchen  });
 	}

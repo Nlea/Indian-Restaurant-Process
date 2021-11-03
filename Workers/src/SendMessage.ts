@@ -6,9 +6,9 @@ require("dotenv").config();
 const zbc = new ZBClient()
 
 zbc.publishMessage({
-    correlationKey: "Lea",
+    correlationKey: "Niall",
     name: "table_msg",
     variables: {
-      tablenumber: "10"
+      tablenumber: "100"
     }
 });
