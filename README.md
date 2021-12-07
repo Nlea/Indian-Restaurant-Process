@@ -1,6 +1,6 @@
 # Indian-Restaurant-Process
 
-This is the process I showed during the WTF is cloud native conference. 
+This is the process I showed during the [talk](https://www.youtube.com/watch?v=OSuEFufhSvg) at the [* *WTF is cloud native conference* *](https://www.cloud-native-conf.wtf/). 
 
 It is implemented in [Camunda Cloud](https://docs.camunda.io/docs/components/concepts/what-is-camunda-cloud/). You can find the BPMN Diagramm in here and in the folders the Node Workers that I used.
 
@@ -49,4 +49,7 @@ ZEEBE_AUTHORIZATION_SERVER_URL='https://login.cloud.camunda.io/oauth/token'
 - The workers are written in JS make sure you have [node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed
 - The workers use [Typescript](https://www.npmjs.com/package/ts-node#overview) so make sure you have it installed
 - In order to read the credentials from the .env file you need the [Dotenv package](https://www.npmjs.com/package/dotenv): ```npm install dotenv```   
-- In order to connect to Camunda Cloud the Workers uses the [JS Client library](https://docs.camunda.io/docs/apis-clients/community-clients/javascript/) ```npm install zeebe-node ``
+- In order to connect to Camunda Cloud the Workers uses the [JS Client library](https://docs.camunda.io/docs/apis-clients/community-clients/javascript/) ```npm install zeebe-node ``` 
+
+4. Run the workers: Naviage to the folder of the workers and start them by using ```ts-node src/WORKERSNAME.ts ``` 
+5. 👀 Observe the console of the workers and the state of the process in Operate
