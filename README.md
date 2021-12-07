@@ -1,6 +1,6 @@
 # Indian-Restaurant-Process
 
-This is the process I showed during the [talk](https://www.youtube.com/watch?v=OSuEFufhSvg) at the [* *WTF is cloud native conference* *](https://www.cloud-native-conf.wtf/). 
+This is the process I showed during the [talk](https://www.youtube.com/watch?v=OSuEFufhSvg) at the [*WTF is cloud native conference*](https://www.cloud-native-conf.wtf/). 
 
 It is implemented in [Camunda Cloud](https://docs.camunda.io/docs/components/concepts/what-is-camunda-cloud/). You can find the BPMN Diagramm in here and in the folders the Node Workers that I used.
 
