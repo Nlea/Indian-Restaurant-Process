@@ -4,7 +4,7 @@ This is the process I showed during the WTF is cloud native conference.
 
 It is implemented in [Camunda Cloud](https://docs.camunda.io/docs/components/concepts/what-is-camunda-cloud/). You can find the BPMN Diagramm in here and in the folders the Node Workers that I used.
 
-[Indian-Restaurant-Process](./Indian-Food-Restaurant-Process.png)
+![Indian-Restaurant-Process](./Indian-Food-Restaurant-Process.png)
 
 
 
@@ -36,3 +36,17 @@ There are other options too:
 
 ## Running the Job workers
 
+In order to change the state of the process. You need to run the job workers from this repo and connect them to your Camunda Cloud Cluster. 
+1. [Set up client connection credentials](https://docs.camunda.io/docs/guides/getting-started/setup-client-connection-credentials/)
+2. Create a .env file in the workers directory and paste in your credentials  
+```
+ZEEBE_ADDRESS='xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx.xxx-x.zeebe.camunda.io:xxx'
+ZEEBE_CLIENT_ID='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+ZEEBE_CLIENT_SECRET='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+ZEEBE_AUTHORIZATION_SERVER_URL='https://login.cloud.camunda.io/oauth/token'
+```
+3. Install all the needed packages in order to run the Node clients: 
+- The workers are written in JS make sure you have [node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed
+- The workers use [Typescript](https://www.npmjs.com/package/ts-node#overview) so make sure you have it installed
+- In order to read the credentials from the .env file you need the [Dotenv package](https://www.npmjs.com/package/dotenv): ```npm install dotenv```   
+- In order to connect to Camunda Cloud the Workers uses the [JS Client library](https://docs.camunda.io/docs/apis-clients/community-clients/javascript/) ```npm install zeebe-node ``
