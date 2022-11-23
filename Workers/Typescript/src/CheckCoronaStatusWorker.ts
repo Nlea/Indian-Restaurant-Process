@@ -5,7 +5,7 @@ require("dotenv").config();
 const zbc = new ZBClient();
 
 zbc.createWorker({
-	taskType: 'coronaDocuments',
+	taskType: 'checkCoronaStatus',
 	taskHandler: (job, _, worker) => {
         const { covidDocument } = job.variables
         if(covidDocument == true){
