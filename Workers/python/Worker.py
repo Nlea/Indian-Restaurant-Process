@@ -2,11 +2,7 @@ import asyncio
 from pyzeebe import ZeebeWorker, Job, create_camunda_cloud_channel
 from dotenv import load_dotenv
 import os
-from Tasks import restaurantRouter
-from Tasks import waitingTimeRouter
-from Tasks import orderFoodRouter
-from Tasks import eatFoodRouter
-from Tasks import coronaStatusRouter
+from Tasks import restaurantRouter, waitingTimeRouter, orderFoodRouter, eatFoodRouter, coronaStatusRouter
 
 
 async def main():

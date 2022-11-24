@@ -37,6 +37,7 @@ async def my_task(coronaDocuments: bool, job: Job):
         print("all good, the documents look fine, here is your table")
         return
     else:
+        ##raise Exception("Sorry no valid Corona Document")
         await job.set_error_status("Sorry you don't have valid Corona Documents", "noDocument_err")
 
 
