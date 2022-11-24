@@ -63,7 +63,7 @@ namespace CamundaCloudWorker
                          .Open();
 
                  zeebeClient.NewWorker()
-                         .JobType("covidStatus")
+                         .JobType("checkCoronaStatus")
                          .Handler(CheckCoronaDocuments)
                          .MaxJobsActive(5)
                          .Name(Environment.MachineName)
